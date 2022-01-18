@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="register.css">
+</head>
+<body>
+	<div class="tong">
+		<form method="post" onsubmit="registerNewUser();">
+			<div class="main">
+				<label>Full name:<font color="red">*</font></label>
+				<input required type="text" name="ten" placeholder="Enter fullName"  id="fullName-id">
+			</div>
+			<div class="main">
+				<label>Age:<font color="red">*</font></label>
+				<input required type="text" name="tuoi" placeholder="Enter age" minlength="2" id="age-id">
+			</div>
+			<div class="main">
+				<label>Email:<font color="red">*</font></label>
+				<input required type="email" name="email" placeholder="Enter email" id="email-id">
+			</div>
+			<div class="main">
+				<button type="submit">Dang ki</button>
+			    <button type="reset">reset</button>
+			</div>
+			
+		</form>
+		<a style="padding: 10px;" href="show.html">
+				<button>show code</button>
+		</a>
+	</div>
+
+	<script type="text/javascript">
+		function registerNewUser() {
+			console.log('test...')
+			var fullName = document.getElementById('fullName-id').value
+			var age = document.getElementById('age-id').value
+			var email = document.getElementById('email-id').value
+			var pass = document.getElementyId('pass-id').value
+
+			if(password != pass){
+				alert('mat khau khong chinh xac!!! vui long kiem tra lai')
+				return false;
+			}
+			localStorage.setItem('fullNameLS', fullName)
+			localStorage.setItem('ageLS', age)
+			localStorage.setItem('emailLS', email)
+
+			return false;
+		}
+	</script>
+</body>
+</html>

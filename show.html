@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="show.css">
+</head>
+<body onload="init()">
+	<div class="tong">
+		<div class="main">
+			<span style="font-weight: bold;" id="fullName-id">Full name:</span>
+		</div>
+		<div class="main">
+			<span style="font-weight: bold;" id="age-id">Age:</span>
+		</div>
+		<div class="main">
+			<span style="font-weight: bold;" id="email-id">Email:</span>
+		</div>
+		<a href="register.html">
+			<button>back</button>
+		</a>
+	</div>
+
+	<script type="text/javascript">
+		function init() {
+		    
+
+			document.getElementById('fullName-id').innerHTML += fullName
+			document.getElementById('age-id').innerHTML += age
+			document.getElementById('email-id').innerHTML += email
+			var fullName = localStorage.getItem('fullNameLS')
+			var age = localStorage.getItem('ageLS')
+			var email = localStorage.getItem('emailLS')
+		}
+	</script>
+</body>
+</html>
